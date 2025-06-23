@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional if you want to keep using your own styles -->
+    <script src="calc.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+<center>
+    <div class="main">
+        <h4 class="h">Calculator</h4>
+        <input id="display" style="height: 50px; background-color: rgb(122, 118, 118); border-color: rgb(122, 118, 118);" class="form-control form-control-lg" type="text" readonly>
+
+        <div class="row">
+            <a style="width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px;" class="btn btn-primary" onclick="read('1')" href="#">1</a>
+            <a style="width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px;" class="btn btn-primary" onclick="read('2')" href="#">2</a>
+            <a style="width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px;" class="btn btn-primary" onclick="read('3')" href="#">3</a>
+            <a style="border-color:red; background-color: red; width:60px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px" onclick=" deleteLast()" class="btn btn-primary" href="#">del</a>
+        </div>
+
+        <div class="row">
+            <a style="width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px;" class="btn btn-primary" onclick="read('4')" href="#">4</a>
+            <a style="width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px;" class="btn btn-primary" onclick="read('5')" href="#">5</a>
+            <a style="width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px;" class="btn btn-primary" onclick="read('6')" href="#">6</a>
+            <a style="border-color: rgb(255, 187, 0); background-color: rgb(255, 187, 0); width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px" onclick="appendOperation('+')" class="btn btn-primary" href="#">+</a>
+        </div>
+
+        <div class="row">
+            <a style="width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px" onclick="read('7')" class="btn btn-primary" href="#">7</a>
+            <a style="width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px" onclick="read('8')" class="btn btn-primary" href="#">8</a>
+            <a style="width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px" onclick="read('9')" class="btn btn-primary" href="#">9</a>
+            <a style="border-color: rgb(255, 187, 0); background-color: rgb(255, 187, 0); width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px" onclick="appendOperation('-')" class="btn btn-primary" href="#">-</a>
+        </div>
+
+        <div class="row">
+            <a style="border-color: rgb(255, 187, 0); background-color: rgb(255, 187, 0); width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px" onclick="floatNum()" class="btn btn-primary" href="#">.</a>
+            <a style="width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px" onclick="read('0')" class="btn btn-primary" href="#">0</a>
+            <a style="border-color: rgb(255, 187, 0); background-color: rgb(255, 187, 0); width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px" onclick="appendOperation('/')" class="btn btn-primary" href="#">/</a>
+            <a style="border-color: rgb(255, 187, 0); background-color: rgb(255, 187, 0); width: 45px; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px" onclick="appendOperation('*')" class="btn btn-primary" href="#">*</a>
+        </div>
+
+        <div class="row">
+            <a style="border-color: rgb(185, 68, 35); background-color: rgb(185, 68, 35); width: 40%; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px" onclick="reset()" class="btn btn-primary" href="#">reset</a>
+            <a style="border-color: rgb(95, 153, 29); background-color: rgb(95, 153, 29); width: 40%; height: 45px; border-radius: 60px; align-items: center; margin-top: 3px" onclick="calculate()" class="btn btn-primary" href="#">=</a>
+        </div>
+    </div>
+</center>
+</body>
+</html>

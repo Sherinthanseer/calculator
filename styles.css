@@ -1,0 +1,21 @@
+.main{
+    background-color: black;
+    width: 300px;
+    height: 500px;
+    margin: 100px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.h{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+body{
+    background-color: rgb(28, 28, 45);
+}
